@@ -3,36 +3,61 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CETREKAN LAMPU</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <img src="/assets/images/off.png" alt="..." id="lampu1" width="400" height="400" />
-    <h1>Cetrekan Lampu ON OFF Bro</h1>
-    <button onclick="saklar('on')">Nyalakan Lampu Bro!</button>
-    <button onclick="saklar('off')">Matikan Lampu Bro!</button>
+    <div class="flex justify-center items-center min-h-screen bg-gray-800">
+
+        <!-- Lampu1 -->
+        <div class="flex flex-col gap-2 m-2 items-center">
+            <img src="/assets/images/off.png" alt="..." id="lampu1" />
+            <label for="AcceptConditions1" class="relative h-8 w-14 cursor-pointer" w-fit>
+                <input type="checkbox" id="AcceptConditions1" class="peer sr-only" onchange="saklar()" />
+
+                <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-blue-500"></span>
+
+                <span
+                    class="absolute inset-y-0 start-0 m-1 h-6 w-6 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent">
+                </span>
+            </label>
+        </div>
+
+
+        <!-- Lampu2 -->
+        <div class="flex flex-col gap-2 m-2 items-center">
+            <img src="/assets/images/off.png" alt="..." id="lampu2" />
+            <label for="AcceptConditions2" class="relative h-8 w-14 cursor-pointer" w-fit>
+                <input type="checkbox" id="AcceptConditions2" class="peer sr-only" onchange="saklar()" />
+
+                <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-blue-500"></span>
+
+                <span
+                    class="absolute inset-y-0 start-0 m-1 h-6 w-6 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent">
+                </span>
+            </label>
+        </div>
+
+        <!-- Lampu3 -->
+        <div class="flex flex-col gap-2 m-2 items-center">
+            <img src="/assets/images/off.png" alt="..." id="lampu3" />
+            <label for="AcceptConditions3" class="relative h-8 w-14 cursor-pointer" w-fit>
+                <input type="checkbox" id="AcceptConditions3" class="peer sr-only" onchange="saklar()" />
+
+                <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-blue-500"></span>
+
+                <span
+                    class="absolute inset-y-0 start-0 m-1 h-6 w-6 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent">
+                </span>
+            </label>
+        </div>
+    </div>
 
     <!-- Script JS -->
-    <script>
-    function saklar(params) {
-        console.log(params);
-
-        let lampu1 = document.getElementById('lampu1');
-
-        if(params == 'on'){
-            lampu1.src = "assets/images/on.png"
-        }
-        if(params == 'off'){
-            lampu1.src = "assets/images/off.png"
-        }
-        return lampu1;
-    }
-    </script>
+    <script src="saklar.js" type="application/javascript"></script>
 </body>
 
 </html>
